@@ -23,6 +23,8 @@ A simple web-based file converter built with **Python (Flask)** that allows user
 | DOCX  | PDF, TXT |
 | TXT   | DOCX, PDF |
 
+Support for file format conversions for data, archive, images, videos, and audio file formats to be implemented.
+
 ---
 
 ## 🧱 Tech Stack
