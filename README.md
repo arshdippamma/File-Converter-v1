@@ -46,3 +46,67 @@ Support for file format conversions for data, archive, images, videos, and audio
 ```bash
 git clone https://github.com/YOUR_USERNAME/file-converter.git
 cd file-converter
+```
+
+### 2. Create and activate a virtual environment
+
+```bash
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+You can also install manually:
+```bash
+pip install flash python-docx docx2pdf pdf2docx pdfplumber fpdf
+```
+
+### 4. Run the app
+
+```bash
+python app.py
+```
+
+Then visit: https://127.0.0.1:5000/
+
+## 🗂️ Project Structure
+
+file-converter/
+├── app.py
+├── templates/
+│   └── index.html
+├── converters/
+│   ├── document_converters/
+│   │   ├── pdf_converters.py
+│   │   ├── docx_converters.py
+│   │   └── txt_converters.py
+├── uploads/
+├── converted/
+└── README.md
+
+Note: the `uploads/` and `converted/` folders will be created by the application and are, therefore, excluded from this repo.
+
+## 📌 Notes
+
+- Only valid input/output format combinations are allowed via dropdowns.
+- This is a local app — files are not stored or sent externally.
+- Designed for educational/demo use; not secure for production without enhancements.
+
+## 📄 License
+
+MIT License. Feel free to modify, improve, and share.
+
+## 🙌 Acknowledgments
+
+- [Flask](https://flask.palletsprojects.com/en/stable/)
+- [python-docx](https://github.com/python-openxml/python-docx)
+- [pdfplumber](https://github.com/jsvine/pdfplumber)
+- [fpdf2](https://github.com/py-pdf/fpdf2)
