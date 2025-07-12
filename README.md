@@ -79,18 +79,7 @@ Then visit: https://127.0.0.1:5000/
 
 ## 🗂️ Project Structure
 
-file-converter/
-├── app.py
-├── templates/
-│   └── index.html
-├── converters/
-│   ├── document_converters/
-│   │   ├── pdf_converters.py
-│   │   ├── docx_converters.py
-│   │   └── txt_converters.py
-├── uploads/
-├── converted/
-└── README.md
+<pre lang="md"><code>## 🗂️ Project Structure ``` file-converter/ ├── app.py ├── templates/ │ └── index.html ├── converters/ │ ├── document_converters/ │ │ ├── pdf_converters.py │ │ ├── docx_converters.py │ │ └── txt_converters.py ├── uploads/ ├── converted/ └── README.md ``` </code></pre>
 
 Note: the `uploads/` and `converted/` folders will be created by the application and are, therefore, excluded from this repo.
 
