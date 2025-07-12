@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Converter</title>
+</head>
+<body>
+    <h2>Convert a File</h2>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br><br>
+
+        <label for="input_format">From:</label>
+        <select name="input_format" id="input_format" required>
+            <option value="">-- Select Input Format --</option>
+            <option value="docx">DOCX</option>
+            <option value="txt">TXT</option>
+            <option value="pdf">PDF</option>
+        </select>
+        <br><br>
+
+        <label for="output_format">To:</label>
+        <select name="output_format" id="output_format" required>
+            <option value="">-- Select Output Format --</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    <script>
+        const formatMap = {
+            docx: ["pdf", "txt"],
+            txt: ["pdf", "docx"],
+            pdf: ["docx", "txt"]
+        };
+
+        const inputSelect = document.getElementById("input_format");
+        const outputSelect = document.getElementById("output_format");
+
+        inputSelect.addEventListener("change", () => {
+            const selected = inputSelect.value;
+            const options = formatMap[selected] || [];
+
+            outputSelect.innerHTML = '<option value="">-- Select Output Format --</option>';
+            options.forEach(fmt => {
+                const opt = document.createElement("option");
+                opt.value = fmt;
+                opt.textContent = fmt.toUpperCase();
+                outputSelect.appendChild(opt);
+            });
+        });
+    </script>
+</body>
+</html>
