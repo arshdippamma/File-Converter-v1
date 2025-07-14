@@ -2,30 +2,33 @@
 <html>
 <head>
     <title>File Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>Convert a File</h2>
-    <form action="/convert" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" required>
-        <br><br>
+    <div class="container">
+        <h2>Convert a File</h2>
+        <form action="/convert" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br><br>
 
-        <label for="input_format">From:</label>
-        <select name="input_format" id="input_format" required>
-            <option value="">-- Select Input Format --</option>
-            <option value="docx">DOCX</option>
-            <option value="txt">TXT</option>
-            <option value="pdf">PDF</option>
-        </select>
-        <br><br>
+            <label for="input_format">From:</label>
+            <select name="input_format" id="input_format" required>
+                <option value="">-- Select Input Format --</option>
+                <option value="docx">DOCX</option>
+                <option value="txt">TXT</option>
+                <option value="pdf">PDF</option>
+            </select>
+            <br><br>
 
-        <label for="output_format">To:</label>
-        <select name="output_format" id="output_format" required>
-            <option value="">-- Select Output Format --</option>
-        </select>
-        <br><br>
+            <label for="output_format">To:</label>
+            <select name="output_format" id="output_format" required>
+                <option value="">-- Select Output Format --</option>
+            </select>
+            <br><br>
 
-        <button type="submit">Convert</button>
-    </form>
+            <button type="submit">Convert</button>
+        </form>
+    </div>
 
     <script>
         const formatMap = {
